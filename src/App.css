@@ -1,4 +1,5 @@
 .grid {
+	flex-basis: 400px;
 	height: 100vh;
 	display: grid;
 	padding: 1rem;
