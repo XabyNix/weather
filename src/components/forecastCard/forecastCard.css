@@ -1,0 +1,25 @@
+.singleDay {
+	border-radius: 1.2rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.singleDay:hover {
+	background-color: var(--card-bg-lighter);
+}
+.temperature {
+	color: rgb(245, 105, 105);
+	font-size: x-large;
+	letter-spacing: 3px;
+	text-align: left;
+	font-weight: 500;
+}
+.min {
+	color: blue;
+	font-size: small;
+}
+.date {
+	font-weight: 500;
+	flex-basis: 170px;
+}

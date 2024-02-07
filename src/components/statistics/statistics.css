@@ -1,0 +1,94 @@
+.hilights-grid {
+	margin-top: 10px;
+	flex: 1;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-areas:
+		"wind 		wind	 	 sunset "
+		"wind		wind	 	 sunset"
+		"humidity 	visibility		feelslike";
+
+	gap: 10px;
+}
+
+#wind {
+	grid-area: wind;
+}
+#sunset {
+	grid-area: sunset;
+	justify-content: center;
+}
+
+#visibility {
+	grid-area: visibility;
+}
+
+#humidity {
+	grid-area: humidity;
+}
+#feelslike {
+	grid-area: feelslike;
+}
+
+#title {
+	margin: 0;
+	margin-left: 1rem;
+}
+
+.innerCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	background-color: var(--inner-card-bg-color);
+	border-radius: var(--border-radius);
+	padding: 1rem;
+	h2 {
+		font-size: xx-large;
+		font-weight: 400;
+		margin: 0;
+
+		span {
+			font-size: small;
+		}
+	}
+
+	h3 {
+		font-size: small;
+		margin: 0;
+	}
+}
+
+.innerCard-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	font-size: x-small;
+	flex-shrink: 0;
+
+	h2,
+	p {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	.hilights-grid {
+		grid-template-areas:
+			"wind sunset humidity"
+			"wind sunset visibility"
+			"wind sunset feelslike";
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.hilights-grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"wind sunset"
+			"wind sunset"
+			"humidity feelslike"
+			"visibility .";
+	}
+}

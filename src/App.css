@@ -1,0 +1,92 @@
+.grid {
+	height: 100vh;
+	display: grid;
+	padding: 1rem;
+	gap: 1rem;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: 1fr 2fr;
+	grid-template-areas:
+		"weather statistics"
+		"forecast weathermap";
+}
+
+.blured::before {
+	content: "";
+	background-image: url("/circles.png");
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	filter: blur(50px);
+}
+.blured {
+	> * {
+		z-index: 1;
+	}
+}
+.cardContainer {
+	position: relative;
+	flex-basis: 600px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	background-color: var(--card-bg-color) /* #383838 */;
+	border-radius: var(--border-radius);
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+.cardContainer::-webkit-scrollbar {
+	display: none;
+}
+
+/** MediaQueries **/
+
+/* SMALL */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	.grid {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+	.cardContainer {
+		overflow: visible;
+	}
+	.innerCard-section {
+		flex-direction: column;
+	}
+}
+
+/* TABLETS */
+@media screen and (max-width: 768px) {
+}
+
+/* LAPTOPS */
+@media screen and (max-width: 1024) {
+}
+/* DESKTOPS */
+@media screen and (max-width: 1200) {
+}
+
+/** grid area **/
+#statistics {
+	grid-area: statistics;
+}
+#weather {
+	grid-area: weather;
+}
+#forecast {
+	grid-area: forecast;
+}
+#weathermap {
+	padding: 0;
+	grid-area: weathermap;
+	flex-basis: 600px;
+	overflow: hidden;
+}
+
+/** styling of the map **/
+.leaflet-container {
+	height: 100%;
+}

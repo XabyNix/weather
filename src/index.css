@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+	box-sizing: border-box;
+	margin: 0;
+	border: none;
+	padding: 0;
+}
+:root {
+	/* Presets */
+	--body-color: rgba(32, 136, 196, 0.63);
+	--text-color: rgb(59, 59, 59);
+
+	--light-card-bg-color: rgba(255, 255, 255, 0.267) /* #eeeeee */;
+	--dark-card-bg-color: #282e35;
+
+	--light-inner-card-bg-color: rgba(255, 255, 255, 0.308);
+	--dark-inner-card-bg-color: #22222281;
+
+	/* Variables */
+	--card-shadow: 1.9px 3.8px 3.8px hsl(0deg 0% 0% / 0.44);
+	--card-bg-color: var(--light-card-bg-color);
+	--inner-card-bg-color: var(--light-inner-card-bg-color);
+	--border-radius: 10px;
+	--leaflet-tile-filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3)
+		brightness(0.7);
+}
+
+body {
+	max-height: 100vh;
+
+	font-family: "Poppins", sans-serif;
+	background-color: var(--body-color);
+	color: var(--text-color);
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0.2rem;
+	background-color: var(--inner-card-bg-color);
+}
+input:focus-visible {
+	outline: none;
+}
+button:hover {
+	background-color: rgba(98, 182, 252, 0.308);
+	outline: 1px solid var(--body-color);
+}
+
+img {
+	aspect-ratio: 1/1;
+	width: 150px;
+}
+
+@media (prefers-color-scheme: dark) {
+	.leaflet-layer,
+	.leaflet-control {
+		filter: var(--leaflet-tile-filter);
+	}
+	:root {
+		--card-bg-color: var(--dark-card-bg-color);
+		--inner-card-bg-color: var(--dark-inner-card-bg-color);
+		--body-color: black;
+		--text-color: white;
+	}
+	button:hover {
+		outline: 1px solid white;
+	}
+	.min {
+		color: cyan;
+	}
+}

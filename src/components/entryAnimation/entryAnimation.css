@@ -1,0 +1,19 @@
+.entryContainer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+.entryContainer h1 {
+	font-size: 5rem;
+	text-shadow: var(--card-shadow);
+}
+#seasonsVideo {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	object-position: right;
+	object-fit: cover;
+	z-index: -1;
+}

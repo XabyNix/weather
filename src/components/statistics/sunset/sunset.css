@@ -1,0 +1,8 @@
+.sunset-graphic > svg {
+	width: 100%;
+}
+.sunsetTime {
+	display: flex;
+	justify-content: space-between;
+	font-size: small;
+}

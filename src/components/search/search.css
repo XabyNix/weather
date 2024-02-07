@@ -1,0 +1,81 @@
+.form-open {
+	--text-color: #b9a3b8;
+	--bg-search-color: #352834;
+	--border-radius: 20px;
+
+	box-shadow: var(--card-shadow);
+	border-radius: var(--border-radius);
+	background-color: var(--bg-search-color);
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	font-size: large;
+	overflow: hidden;
+}
+
+.searchContainer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.5rem;
+	padding: 0.5rem;
+	color: var(--text-color);
+}
+
+.searchContainer input {
+	font-size: inherit;
+	border-radius: 13px;
+	padding: 1rem;
+	flex: 1;
+	background-color: #523e50;
+	color: var(--text-color);
+	min-width: 10px;
+}
+
+#searchButton {
+	--max-height: 70px;
+
+	position: absolute;
+	top: 20px;
+	right: 20px;
+
+	aspect-ratio: 1/1;
+	height: var(--max-height);
+	border-radius: 100%;
+	font-size: x-large;
+	box-shadow: 1.2px 2.4px 2.4px hsl(0deg 0% 0% / 0.46);
+}
+
+#clearButton {
+	background-color: transparent;
+	color: inherit;
+}
+
+#clearButton:hover {
+	outline: none;
+}
+
+#clearButton svg {
+	font-size: x-large;
+	vertical-align: middle;
+}
+
+/* DROPDOWN */
+.dropdown-list {
+	list-style: none;
+
+	color: inherit;
+}
+
+.dropdown-list li {
+	padding: 1rem;
+	transition: all 0.2s;
+}
+
+.dropdown-list li:hover {
+	background-color: slategrey;
+	cursor: pointer;
+	background-color: #523e50;
+}
